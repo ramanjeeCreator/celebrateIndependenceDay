@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    font-weight: bolder;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+marquee {
+    min-height: 100vh;
+    width: 30px;
+    position: fixed;
+    top: 0;
+}
+
+marquee img {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+#mar-left {
+    left: 0;
+}
+
+#mar-right {
+    right: 0;
+}
+
+#main-div {
+    max-width: calc(100vw - 100px);
+    width: 500px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .14), 0 1px 14px 2px rgba(0, 0, 0, .12), 0 0 5px -3px rgba(0, 0, 0, .3);
+}
+
+@keyframes rotate {
+    0% {
+        background: conic-gradient(#ff0000, #ff9900, #33cc33, #0066cc, #9933cc, #ff0066);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    20% {
+        background: conic-gradient(#ff9900, #33cc33, #0066cc, #9933cc, #ff0066, #ff0000);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    40% {
+        background: conic-gradient(#33cc33, #0066cc, #9933cc, #ff0066, #ff0000, #ff9900);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    60% {
+        background: conic-gradient(#0066cc, #9933cc, #ff0066, #ff0000, #ff9900, #33cc33);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    80% {
+        background: conic-gradient(#9933cc, #ff0066, #ff0000, #ff9900, #33cc33, #0066cc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100% {
+        background: conic-gradient(#ff0066, #ff0000, #ff9900, #33cc33, #0066cc, #9933cc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    color: transparent;
+    display: inline-block;
+    background: conic-gradient(#ff0000, #ff9900, #33cc33, #0066cc, #9933cc, #ff0066);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rotate 1s 0s linear infinite, hildol 4s 1s linear infinite;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    background: linear-gradient(to bottom,
+            #ff0000 0%,
+            #ff9900 20%,
+            #33cc33 40%,
+            #0066cc 60%,
+            #9933cc 80%,
+            #ff0066 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+    animation: hildol 4s infinite;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+@keyframes hildol {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate(-3deg);
+        transform: scale3d(.9, .9, .9) rotate(-3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.red-text {
+    color: red;
+}
+
+picture {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+picture img:first-child {
+    animation: hildol 4s 1s infinite;
+}
+
+.img {
+    background-size: 100%;
+    width: 80%;
+}
+
+#img1 {
+    min-height: 500px;
+    width: 100%;
+}
+
+#shayri {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#shayri p {
+    text-shadow: 1px 1px 3px black, 1px 1px 3px black, -1px -1px 3px black, -1px -1px 3px black;
+    color: #FF671F
+}
+
+#footer {
+    min-height: auto;
+    width: 100%;
+    position: static;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url('../img/lal-kila-img.png');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 68.7%;
+    overflow: hidden;
+}
+
+.container * {
+    position: relative;
+    left: 20%;
+}
+
+.container p {
+    color: red;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: context-menu;
+}
+
+.container img {
+    display: block;
+    cursor: pointer;
+}
+
+#arrow {
+    width: 75px !important;
+    transform: translateX(60px);
+}
+
+#bgImg {
+    width: 100vw;
+    height: 100vh;
+}
+
+#flag {
+    width: 200px;
+}
+
+#footer-button {
+    background: #000;
+    width: 100%;
+    position: absolute;
+    left: 20px;
+    margin-bottom: 46px;
+    z-index: 100;
+}
+
+#footer-button input[type=text] {
+    background: red;
+    color: #fff;
+}
+
+#footer-button input[type=text]:focus {
+    border: none;
+}
+
+#footer-button input[type=text]::placeholder {
+    color: #fff;
+}
+
+#create-own {
+    background: linear-gradient(to bottom,
+            #ff0000 0%,
+            #ff9900 20%,
+            #33cc33 40%,
+            #0066cc 60%,
+            #9933cc 80%,
+            #ff0066 100%);
+    border: 2px solid red;
+    padding: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+    font-family: fantasy;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+}
+#create-own:hover {
+    animation: hildol 4s linear infinite;
+    transition: all 1s ease-out;;
+}
